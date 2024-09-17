@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="titleStyle">
+        <item name="android:textSize">@dimen/screen_title_24</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="messageStyle">
+        <item name="android:textSize">@dimen/screen_message_16</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="itemStyle">
+        <item name="android:textSize">@dimen/name</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:gravity">left</item>
+
+    </style>
+</resources>

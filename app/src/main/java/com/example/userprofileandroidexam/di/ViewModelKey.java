@@ -1,0 +1,27 @@
+package com.example.userprofileandroidexam.di;
+
+import androidx.lifecycle.ViewModel;
+
+import com.example.userprofileandroidexam.ui.viewmodel.UserProfileViewModel;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+import dagger.MapKey;
+
+@Documented
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@MapKey
+public @interface ViewModelKey {
+    /**
+     * Class extends to view mode.
+     *
+     * @return {@link Class}
+     */
+    Class<? extends ViewModel> value();
+
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--font size-->
+
+    <!--title-->
+    <dimen name="screen_title_24">24sp</dimen>
+    <dimen name="screen_title_16">16sp</dimen>
+
+    <!--message-->
+    <dimen name="screen_message_8">8sp</dimen>
+    <dimen name="screen_message_16">16sp</dimen>
+
+    <!--margins-->
+    <dimen name="margin24">24dp</dimen>
+    <dimen name="margin16">16dp</dimen>
+    <dimen name="margin8">8dp</dimen>
+
+    <!--itemFont-->
+    <dimen name="name">12dp</dimen>
+
+    <!--border-->
+    <dimen name="border_height">1dp</dimen>
+    <dimen name="minimum_height">48dp</dimen>
+
+
+
+</resources>
