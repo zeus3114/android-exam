@@ -1,5 +1,32 @@
 # android-exam
 
+- Android application features:
+  - Displaying random user's remotes source - https://randomuser.me
+  - Load cache data when network connection is OFF or when Cache is available.
+  - Swipe top to refresh the load data(Cache data will be deleted and update a new sets of data)
+  - Swipe bottom request additional sets of users(Pagination)
+  - Displaying selected user's information on different activity.
+
+- Architectural design pattern
+  - MVVM with repository
+  - Dependency injection using Dagger 2
+  - View and Data Binding
+  - Rx Java
+  - Retrofit
+  - Material design
+  - Room Database
+  - okhttp3
+
+- Tools
+    - android material
+    - jakewharton.rxbinding4:rxbinding-recyclerview
+    - jakewharton.rxbinding4:rxbinding-swiperefreshlayout
+    - rx java and jakewharton.rxbinding3:rxbinding
+    - com.squareup.retrofit2:retrofit
+    - com.squareup.okhttp3:okhttp-urlconnection
+    - com.google.dagger:dagger
+    - androidx.room:room-rxjava
+
 ## Goal of the exam ##
 To assess a developer's skills in terms of developing Android apps and decision-making on solving common development tasks.
 

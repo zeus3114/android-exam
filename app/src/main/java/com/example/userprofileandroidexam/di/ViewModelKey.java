@@ -1,8 +1,7 @@
 package com.example.userprofileandroidexam.di;
 
-import androidx.lifecycle.ViewModel;
 
-import com.example.userprofileandroidexam.ui.viewmodel.UserProfileViewModel;
+import androidx.lifecycle.ViewModel;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

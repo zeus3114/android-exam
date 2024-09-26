@@ -16,11 +16,11 @@
     <dimen name="margin8">8dp</dimen>
 
     <!--itemFont-->
-    <dimen name="name">12dp</dimen>
+    <dimen name="name">20dp</dimen>
 
     <!--border-->
     <dimen name="border_height">1dp</dimen>
-    <dimen name="minimum_height">48dp</dimen>
+    <dimen name="cardview_height">120dp</dimen>
 
 
 
