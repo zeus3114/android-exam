@@ -72,12 +72,12 @@ public class UserProfileViewModel extends ViewModel implements UserProfileViewMo
                 .subscribe(new Observer<UserResponse>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-                        Log.e("onSubscribe ", "onSubscribe");
+                        Log.d(TAG, "onSubscribe");
                     }
 
                     @Override
                     public void onNext(UserResponse userResponse) {
-                        Log.e("onNext: ", "onNext" + userResponse.getUserList().size());
+                        Log.d(TAG, "onNext: Saving Data");
                         //insert cache to db
                         for (int i = 0; i < userResponse.getUserList().size(); i++) {
                             appDatabase.getUserDao().insertUser(new UserEntity(0,
@@ -97,13 +97,13 @@ public class UserProfileViewModel extends ViewModel implements UserProfileViewMo
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.e("onError ", "Response error: " + e);
+                        Log.e(TAG, "Response error: " + e);
                         errorMutableLiveData.setValue(new Error((ErrorState.INTERNET_CONNECTION_ERROR)));
                     }
 
                     @Override
                     public void onComplete() {
-                        Log.e("onComplete ", "Response Complete");
+                        Log.i(TAG, "Response Complete");
                     }
                 });
     }
@@ -112,12 +112,12 @@ public class UserProfileViewModel extends ViewModel implements UserProfileViewMo
     public void getAllUsers() {
         localUserSavedDataModelList.clear();
         if (appDatabase.getUserDao().getAllUsers().size() > 0) {
-            Log.e(TAG, "Load cache");
+            Log.d(TAG, "Load cache");
             localUserSavedDataModelList.addAll(appDatabase.getUserDao().getAllUsers());
             loadCacheMutableLiveData.postValue(new LoadCache(localUserSavedDataModelList,
                     LoadDataUserState.LOAD_CACHE));
         } else {
-            Log.e(TAG, "Cache not available");
+            Log.d(TAG, "Cache not available");
             loadCacheMutableLiveData.postValue(new LoadCache(LoadDataUserState.CACHE_NOT_AVAILABLE));
         }
     }
@@ -127,7 +127,7 @@ public class UserProfileViewModel extends ViewModel implements UserProfileViewMo
         localUserSavedDataModelList.addAll(appDatabase.getUserDao().getAllUsers());
         loadCacheMutableLiveData.postValue(new LoadCache(localUserSavedDataModelList,
                 LoadDataUserState.FORCE_UPDATE_CACHE));
-        Log.e(TAG, "Cache deleted");
+        Log.d(TAG, "Cache deleted");
         PAGE_INDEX = 1;
         appDatabase.getUserDao().clearAllUsers();
     }
